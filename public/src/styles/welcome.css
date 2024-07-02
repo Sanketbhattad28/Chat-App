@@ -1,0 +1,16 @@
+.welcomne-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+
+    img {
+        height: 20rem;
+    }
+
+    span {
+        color: #4e00ff;
+    }
+}
