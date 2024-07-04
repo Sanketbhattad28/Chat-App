@@ -8,7 +8,13 @@ require("dotenv").config();
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://snap1chat-app.netlify.app/",
+    methods: ["GET", "POST", "PATCH", "DELETE"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 app.use("/api/auth", userRoutes);
@@ -32,10 +38,10 @@ const server = app.listen(process.env.PORT, () => {
 
 const io = new Server(server, {
   cors: {
-    origin:
-      "https://snap1chat-app.netlify.app/",
+    origin: "https://snap1chat-app.netlify.app/",
     credentials: true,
   },
+  methods: ["GET", "POST", "PATCH", "DELETE"],
 });
 
 global.onlineUsers = new Map();
