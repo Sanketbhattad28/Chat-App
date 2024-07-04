@@ -12,7 +12,6 @@ app.use(
   cors({
     origin: "https://snap1chat-app.netlify.app/",
     methods: ["GET", "POST", "PATCH", "DELETE"],
-    credentials: true,
   })
 );
 app.use(express.json());

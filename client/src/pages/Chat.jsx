@@ -30,7 +30,7 @@ function Chat() {
   useEffect(() => {
     if (currentUser) {
       socket.current = io(host, {
-        withCredentials: true,
+        // withCredentials: true,
       });
       socket.current.emit("add-user", currentUser._id);
     }
