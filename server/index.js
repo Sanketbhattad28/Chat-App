@@ -33,7 +33,7 @@ const server = app.listen(process.env.PORT, () => {
 const io = new Server(server, {
   cors: {
     origin:
-      "https://66867558f80ea6bdeb12bfa5--nimble-dodol-fd32f2.netlify.app/",
+      "https://snap1chat-app.netlify.app/",
     credentials: true,
   },
 });
