@@ -1,4 +1,4 @@
-const host = "http://localhost:5000";
+const host = "https://snap-chat-app-m7ax.onrender.com";
 
 const registerRoute = `${host}/api/auth/register`;
 const loginRoute = `${host}/api/auth/login`;
