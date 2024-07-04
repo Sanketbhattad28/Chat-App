@@ -10,7 +10,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://snap1chat-app.netlify.app/",
+    origin: "*",
     methods: ["GET", "POST", "PATCH", "DELETE"],
   })
 );
@@ -37,7 +37,7 @@ const server = app.listen(process.env.PORT, () => {
 
 const io = new Server(server, {
   cors: {
-    origin: "https://snap1chat-app.netlify.app/",
+    origin: "*",
     credentials: true,
   },
   methods: ["GET", "POST", "PATCH", "DELETE"],
